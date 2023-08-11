@@ -1,8 +1,17 @@
 # @MVC 구현하기
+### 스프링 MVC는 무엇인가?
 
-1. HandlerExecution 의 역할
+- Model-View-Controller 또는 MVC 패턴을 처리하는 Spring 프레임워크의 모듈이다.
+
+- Spring은 DispatcherServlet을 사용하여 MVC를 구현한다.
+
+- 컨트롤러 역할은 DispatcherServlet, 모델은 데이터, 뷰는 다양한 템플릿 엔진이다.
+
+- 웹 애플리케이션을 유연하고 확장 가능하게 만들어준다.
+
+### HandlerExecution 의 역할
  - 메서드에 붙어있는 RequestMapping 을 읽어오기 위해서 메서드별로 저장해서 실행시켜야한다. 리플렉션을 이용해서 메서드를 실행하기 위해서는 해당 인스턴스도 가지고 있어야한다. 이 둘을 가지고 메서드를 실행시키는 역할을 한다.
-2.  HandlerAdapter 의 역할
+###  HandlerAdapter 의 역할
 - handler 를 실행한다.
   - 서블릿이 직접 핸들러를 실행하지 않는다. 느슨한 결합을 유지할 수 있다.
 - 기존 레거시 Contoller 들이 DispatcherServlet 에서 필요로 하는 ModelAndView 타입을 반환할 수 있도록 한다.
